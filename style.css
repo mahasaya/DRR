@@ -1,0 +1,145 @@
+/* Apply styles to the .parent element */
+.parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+/* Define your custom CSS variables (optional) */
+:root {
+    --bgOrange: #e84949;
+}
+
+/* Apply styles to the 'Add' button within .parent */
+.parent button {
+    background-color: var(--bgOrange);
+    color: white;
+    padding: 0.3rem 1.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.parent button::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.parent button:hover::before {
+    transform: scaleX(1);
+}
+
+.parent button:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+}
+
+/* Apply styles to the .container element */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Apply styles to buttons and inputs within .container */
+.container button {
+    display: block;
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.3rem 1rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.container button::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.container button:hover::before {
+    transform: scaleX(1);
+}
+
+.container button:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+}
+
+.container input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.container .dateExcluded input[type="text"] {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.container .dateExcluded {
+    width: 28%;
+    margin-left: 2%;
+}
+
+.container .lastUpdated button {
+    padding: 10px 15px;
+    background-color: #ff4136;
+}
+
+.container .lastUpdated button:hover {
+    background-color: #d90000;
+}
+
+.leadBtn {
+    margin-top: 1rem;
+}
+
+/* Add borders and equal spacing for the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead th, tbody td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
